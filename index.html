@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>&lt;model-viewer&gt; template</title>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  </head>
+  <body>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer bounds="tight" enable-pan src="SD Macross Valkyrie VF-1J.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls environment-image="moonless_golf_2k.hdr" poster="poster.webp" shadow-intensity="1" auto-rotate camera-orbit="403.2deg 88.31deg auto" skybox-image="moonless_golf_2k.hdr">
+      <button class="Hotspot" slot="hotspot-1" data-position="0.2689718610714261m 0.174948392054465m -0.30771102511761006m" data-normal="-0.6048957209613257m 0.367307655648919m -0.7065311407605283m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Cockpit
+          </div>
+      </button><button class="Hotspot" slot="hotspot-2" data-position="0.3509557015099993m 0.06777189140916984m 0.5995744581548986m" data-normal="0.0747765042171671m 0.9945477723904859m -0.07268564404463021m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Wings</div>
+      </button><button class="Hotspot" slot="hotspot-3" data-position="-0.18564932115393018m 0.28744333135277356m 0.4500398278558962m" data-normal="-0.1544557681636349m -0.522559105731376m -0.8384959133461571m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Flaps</div>
+      </button><button class="Hotspot" slot="hotspot-5" data-position="-0.006462568038821864m -0.0006430806187862625m -0.32992664762780605m" data-normal="-0.43986658355657554m -0.09825247966113286m -0.8926723020855443m" data-visibility-attribute="visible">
+          <div class="HotspotAnnotation">Engine</div>
+      </button>
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer>  
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  </body>
+</html>
